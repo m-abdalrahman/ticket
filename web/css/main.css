@@ -1,0 +1,468 @@
+/***********************************************/
+/*** GENERAL STYLES ***/
+/***********************************************/
+* {
+    text-decoration: none !important;
+    outline: none !important;
+    list-style: none !important;
+}
+@font-face{
+    font-family: 'Planer-Regular';
+    src: url('/web/fonts/Planer-Regular/Planer-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/web/fonts/Planer-Regular/Planer-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/web/fonts/Planer-Regular/Planer-Regular.woff2') format('woff2'),
+        url('/web/fonts/Planer-Regular/Planer-Regular.woff') format('woff'),
+        url('/web/fonts/Planer-Regular/Planer-Regular.ttf')  format('truetype'),
+        url('/web/fonts/Planer-Regular/Planer-Regular.svg#Planer-Regular') format('svg');
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+}
+html {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #ffffff;
+}
+body {
+    position: relative;
+    height: auto !important;
+    min-height: 100%;
+    background-color: #ffffff;
+    padding-top: 85px;
+    padding-bottom: 70px;
+}
+.main-content.full {
+    padding-left: 200px;
+}
+.flex-wrap {
+  position: relative;
+  display: -webkit-box;     
+  display: -moz-box;        
+  display: -ms-flexbox;     
+  display: -webkit-flex;     
+  display: flex; 
+  -webkit-justify-content: center; 
+  justify-content: center;   
+  -webkit-align-items: center; 
+  align-items: center;
+  -webkit-align-content: center; 
+  align-content: center;    
+  -ms-box-orient: horizontal;  
+}
+.flex-row,
+.flex-col{
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  min-height: 100%;
+  display: -webkit-box;     
+  display: -moz-box;        
+  display: -ms-flexbox;     
+  display: -webkit-flex;     
+  display: flex; 
+  -webkit-justify-content: center; 
+  justify-content: center;   
+  -webkit-align-items: center; 
+  align-items: center;
+  -webkit-align-content: center; 
+  align-content: center;    
+  -ms-box-orient: horizontal;        
+}
+.flex-row {
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+}
+.flex-col {
+  -webkit-flex-direction: column; 
+  flex-direction: column; 
+}
+.flex-col-left {
+  -webkit-justify-content:   flex-start; 
+  justify-content:   flex-start; 
+  -webkit-align-items: flex-start; 
+  align-items:  flex-start; 
+  -webkit-align-content:  flex-start; 
+  align-content:  flex-start; 
+}
+.flex-row-left {
+  -webkit-justify-content:   flex-start; 
+  justify-content:  flex-start; 
+  -webkit-align-items:  flex-start; 
+  align-items:  flex-start; 
+  -webkit-align-content:  flex-start; 
+  align-content:  flex-start; 
+}
+.row {
+    margin: 0 !important;
+    width: 100%;
+    padding: 0 30px;
+}
+input,
+textarea,
+select,radio {
+background-image: -webkit-linear-gradient(#37aaaa, #37aaaa), -webkit-linear-gradient(#D2D2D2, #D2D2D2) !important;
+background-image: -o-linear-gradient(#37aaaa, #37aaaa), -o-linear-gradient(#D2D2D2, #D2D2D2) !important;
+background-image: linear-gradient(#37aaaa, #37aaaa), linear-gradient(#D2D2D2, #D2D2D2) !important;
+}
+textarea.form-control{
+  width: 100%; 
+  height: 280px;
+}
+.dir-select {
+    display: inline-block;
+}
+option {
+    height: 40px !important;
+}
+.trans {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.cubic-trans {
+    -webkit-transition: cubic-bezier(.46,.71,.74,.53) 0.3s;
+    -moz-transition: cubic-bezier(.46,.71,.74,.53) 0.3s;
+    transition: cubic-bezier(.46,.71,.74,.53) 0.3s;
+}
+.bordered {
+    border: 1px solid #000000;
+}
+.no-padding {
+    padding: 0;
+}
+.table-link {
+    display: inline-block;
+}
+.admin-header {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 37px;
+    padding-top: 24px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee;
+}
+.admin-header > h1,
+.admin-header > h2,
+.admin-header > h3,
+.admin-header > h4,
+.admin-header > h5,
+.admin-header > h6 {
+    margin: 0;
+}
+.admin-header > .btn.btn-raised.btn-info {
+    margin: 0;
+}
+.admin-header h4 > a:hover, .admin-header h4 > a:active {
+    color: #37aaaa;
+}
+.admin-fix{
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.admin-fix > ul.dropdown-menu {
+    margin-top: -17px;
+}
+hr {
+    width: 100%;
+    margin: 0;
+}
+.separator {
+    border: 0; 
+    height: 1px; 
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background-color: #1ccccc; 
+}
+.btn.btn-xs {
+    padding-left: 0;
+    padding-right: 3px;
+}
+.side-menu-toggle {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    left: 15px;
+    top: 20px;
+    border-radius: 3px;
+    font-size: 20px !important;
+    color: #ffffff !important;
+}
+.new-btn {
+    min-width: 170px;
+    text-align: left;
+}
+.radio {
+    display: inline-block;
+}
+.input-group {
+    width: 100%;
+}
+.radio input[type=radio]:checked ~ .circle {
+    border-color: #37aaaa;
+}
+.radio input[type="radio"]:checked ~ .check {
+    background-color: #37aaaa;
+}
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus {
+    color: #FFFFFF;
+    background-color: #37aaaa;
+}
+/***********************************************/
+/*** HEADER STYLES ***/
+/***********************************************/
+.navbar-toggle .icon-bar {
+    width: 2px;
+}
+.navbar.navbar-default.navbar-fixed-top {
+    background-color: #37aaaa !important;
+}
+.navbar-right {
+    margin-right: -7px;
+}
+.navbar .navbar-nav > li.open > .dropdown-menu {
+    margin-top: 10px;
+}
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu li > a:focus, 
+.navbar.navbar-default .dropdown-menu li > a:hover, 
+.navbar.navbar-default .dropdown-menu li > a:focus {
+    color: #FFFFFF;
+    background-color: #37aaaa;
+}
+.input-group .input-group-addon {
+    padding-left: 0;
+    padding-top: 15px;
+}
+.fa {
+    width: 15px !important;
+}
+.btn.btn-raised:not(.btn-link),
+.btn-group-raised .btn:not(.btn-link), 
+.input-group-btn .btn.btn-raised:not(.btn-link), 
+.btn-group-raised
+.input-group-btn .btn:not(.btn-link) {
+    box-shadow: none;
+}
+.navbar-brand {
+    text-align: center;
+    width: 140px;
+    margin-left: 45px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.navbar-brand > div.ripple-container {
+	width: 0;
+    height: 0;
+}
+.site-title{
+	font-weight: 300;
+  font-size: 45px;
+  font-family: "Planer-Regular";
+}
+
+.side-bar {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    overflow-y: auto;
+    background-color: #37aaaa;
+    top: 70px;
+    bottom: 0;
+    z-index: 1000;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    left: 0;
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+}
+.side-bar.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.side-main-nav {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.side-main-nav-item {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.side-main-nav-link.btn {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 21px;
+    text-align: left;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+.side-sub-menu {
+    width: 100%;
+    background-color: #37aaaa;
+    list-style: none;
+    padding: 0;
+}
+.side-sub-menu-item {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.side-sub-menu-link {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 24px;
+    text-align: left;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+}
+.open-arrow {
+    position: absolute;
+    display: block;
+    top: 30%;
+    right: 7%;
+}
+.open-arrow.active {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+/***********************************************/
+/*** Post STYLES ***/
+/***********************************************/
+.view {
+	margin: 0 auto;
+	max-width: 896px;
+}
+.post {
+	background-color: #ffffff;
+    box-shadow: 0 0 5px 2px rgba(189, 189, 189, 0.4);
+    -moz-box-shadow: 0 0 5px 2px rgba(189, 189, 189, 0.4);
+    -webkit-box-shadow: 0 0 5px 2px rgba(189, 189, 189, 0.4);
+   	padding: 48px 50px;
+    margin-top: 17px;
+}
+a.post-link {
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100%;
+    height: 100%;
+    text-align: left;
+}
+a.post-link:hover, a.post-link:active {
+    color: #37aaaa; 
+}
+div.post.full {
+    min-height: 80vh;
+}
+/***********************************************/
+/*** FOOTER STYLES ***/
+/***********************************************/
+
+
+/***********************************************/
+/*** MEDIA QURIES STYLES ***/
+/***********************************************/
+@media screen and (max-width:768px) {
+    .main-content {
+        padding-left: 0 !important;
+    }
+    .navbar-brand {
+      margin-left: 60px !important;
+    }
+    .side-bar.active{
+      transform: translateX(-200px);
+    }
+    .side-bar{
+      transform: translateX(0px);
+    }
+    textarea.form-control{
+      height: 140px;
+    }
+}
+
+/*************************************************************/
+/***************** RESPONSIVE TABLE STYLES *******************/
+/*********** Inspired From A PEN BY André Jaenisch ***********/
+/*************************************************************/
+table { 
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 5px; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #f2f2f2; 
+  color: #37aaaa; 
+  font-weight: bold;
+  border-bottom: 1px solid #e2e2e2; 
+}
+td, th { 
+  padding: 6px; 
+  text-align: left; 
+}
+th:first-child,
+td:first-child {
+    padding-left: 20px;
+}
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+    /* Force table to not be like tables anymore */
+    table.responsive,
+    .responsive thead, 
+    .responsive tbody, 
+    .responsive th, 
+    .responsive td, 
+    .responsive tr { 
+        display: block; 
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .responsive thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .responsive tr { border: 1px solid #ccc; }
+    .responsive td { 
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+    .responsive td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+    /*
+    Label the data
+    */
+    .responsive td:before { 
+        content: attr(data-table-header);
+    }
+}

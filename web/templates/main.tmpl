@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>{{.PageTitle}}</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+		<!--     Fonts and icons     -->
+		<link rel="stylesheet" href="/web/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
+		<!--     BOOTSTRAP AND MATERIAL DESIGN     -->
+		<link rel="stylesheet" href="/web/vendor/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/vendor/css/material-kit.css">
+		<!-- MAIN CSS FILE -->
+		<link rel="stylesheet" href="/web/css/main.css">
+		<!-- BOOTSTRAP + MATERIAL + JQUERY JS FILES -->
+		<script src="/web/vendor/js/jquery.min.js"></script>
+		<script src="/web/vendor/js/bootstrap.min.js"></script>
+		<script src="/web/vendor/js/material.min.js"></script>
+		<script src="/web/vendor/js/material-kit.js"></script>
+		<script src="/web/vendor/js/bootstrap-datepicker.js"></script>
+		<script src="/web/vendor/js/nouislider.min.js"></script>
+		{{- template "javaScript" . -}}
+    	{{ define "javaScript" }}{{ end }}
+		<!-- MAIN JS FILE -->
+		<script src="/web/js/main.js"></script>
+	</head>
+	<body>
+		<!-- ****************************************** -->
+		<!-- HEADER STARTS HERE -->
+		<!-- ****************************************** -->
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="btn btn-danger btn-simple btn-xs side-menu-toggle">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</button>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"><span class="site-title">Ticket</span></a>
+					</div>
+				</div>
+			</nav>
+		</header><!-- HEADER ENDS HERE -->
+		<!-- ************************************************************ -->
+		<!-- ************************************************************ -->
+		<!-- ****************************************** -->
+		<!-- SIDE-BAR STARTS HERE -->
+		<!-- ****************************************** -->
+		<div class="side-bar trans active">
+			<ul class="side-main-nav">
+				<li class="side-main-nav-item">
+					<a href="/tickets" class="btn btn-raised btn-default side-main-nav-link">
+						<i class="fa" aria-hidden="true"></i> 
+						All Tickets
+					</a>
+				</li>
+				<hr class="separator">
+				<li class="side-main-nav-item">
+					<a href="/logout" class="btn btn-raised btn-default side-main-nav-link">
+						<i class="fa" aria-hidden="true"></i> 
+						Logout
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- ****************************************** -->
+		<!-- SIDE-BAR ENDS HERE -->
+		<!-- ****************************************** -->
+		<!-- ****************************************** -->
+		<!-- MAIN STARTS HERE -->
+		<!-- ****************************************** -->
+		<main class="flex-col">
+			<div class="main-content trans flex-col flex-col-left full">
+				<div class="row">
+				{{if .ContentBar}}
+					<div class="col-xs-12 no-padding">
+						<div class="admin-header">
+							<h4>
+								<a href="/admin/">Content</a>
+								{{if .Dir.Metadata.Name}}
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								<a href="/admin/directory/{{.Dir.Metadata.Name}}/">{{.Dir.Metadata.Name}}</a>
+								{{end}}
+							</h4>
+						</div>
+					</div>
+				{{end}}
+				{{- template "content" . }}
+				</div>
+			</div>
+		</main><!-- MAIN ENDS HERE -->
+		<!-- ************************************************************ -->
+		<!-- ************************************************************ -->
+	</body>
+</html>

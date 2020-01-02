@@ -1,0 +1,48 @@
+{{define "content" }}
+						<div class="view">
+							<div class="col-xs-12">
+								<div class="post">
+									<div class="Page-header">
+										<h2>{{.Title}}</h2>
+										<div class="meta">
+										</div>
+									</div>
+									<hr>
+									<br>
+									{{ .Description }}
+								</div>
+								{{range .Comments}}
+								<div class="post">
+									<div class="Page-header">
+										<div class="meta">
+											<i>By: <span class="author">{{.User.FullName}}</span></i>
+										</div>
+									</div>
+									<hr>
+									<br>
+									{{ .Reply }}
+								</div>
+								{{end}}
+							</div>
+							<div class="col-xs-12 no-padding">
+								<div class="form-holder">
+									<form class="login-form" method="post">
+										<div class="row">
+											<div class="col-md-6 col-md-push-3 col-xs-12">
+												<div class="input-group">
+													<textarea class="form-control" placeholder="Comment" rows="7" name="comment"></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 col-md-push-3 col-xs-12">
+												<div class="input-group">
+													<button class="btn btn-raised btn-default">Comment</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+{{end }}				

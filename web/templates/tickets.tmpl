@@ -1,0 +1,57 @@
+{{define "content"}}
+					<div class="col-xs-12 no-padding">
+						<div class="admin-fix">
+								<a href="/ticket/new" class="btn btn-raised btn-info dropdown-toggle">NEW Ticket</a>
+						</div>
+					</div>
+					<div class="col-xs-12 no-padding">
+						<div class="table-holder">
+							<table class="responsive table-hover">
+								<thead>
+									<tr>
+										<th scope="col">Title</th>
+										{{$admin := .Admin}}
+										{{with $admin}}<th scope="col">User</th>{{end}}
+										<th scope="col">Status</th>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+								{{range $k, $v := .Tickets}}
+								<tr>
+									<td data-table-header="Title">
+										<i class="fa fa-file-text-o" aria-hidden="true"></i>
+										<a href="/ticket/{{$v.ID}}">{{$v.Title}}</a>
+									</td>
+									{{with $admin}}
+									<td data-table-header="User">
+									{{$v.User.FullName}}
+									</td>
+									{{end}}
+									<td data-table-header="Status">
+										<i aria-hidden="true"></i>
+										{{$v.Status}}
+									</td>
+									<td data-table-header="Action">
+										<a href="/ticket/edit/{{$v.ID}}" class="btn btn-success btn-simple btn-xs">
+											<i class="fa fa-edit"></i>
+											Edit
+										</a>
+										<span>
+											-
+										</span>
+										<form action="/ticket/delete/{{$v.ID}}" method="POST" style="display:inline-block">
+											<button class="btn btn-danger btn-simple btn-xs" onclick="confirm('Are you sure you want to delete')">
+												<i class="fa fa-trash"></i>
+												Delete
+											</button>
+										</form>
+									</td>
+								</tr>
+								{{end}}
+								</tbody>
+							</table>
+						</div>
+					</div>	
+{{end}}

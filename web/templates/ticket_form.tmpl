@@ -1,0 +1,38 @@
+{{define "content"}}
+					<div class="col-xs-12 no-padding">
+						<div class="admin-fix">
+							<h4>{{.PageTitle}}</h4>
+						</div>
+					</div>
+					<div class="col-xs-12 no-padding">
+						<div class="form-holder">
+							<form class="login-form" method="post">
+								<div class="row">
+									<div class="col-md-6 col-md-push-3 col-xs-12">
+										<div class="input-group">
+											<input type="text" class="form-control input-title" placeholder="Title" name="title"{{if .Title}} value="{{.Title}}"{{end}}>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-md-push-3 col-xs-12">
+										<div class="input-group">
+											<textarea class="form-control" placeholder="Description" rows="7" name="description">{{.Description}}</textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 col-md-push-3 col-xs-12">
+										<div class="input-group">
+											<button class="btn btn-raised btn-default">{{.Button}}</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+{{end}}
+
+{{ define "javaScript" }}
+		<script src="/web/vendor/js/jquery.slugify.js"></script>
+{{ end }}
